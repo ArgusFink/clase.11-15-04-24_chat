@@ -13,14 +13,19 @@
 
 // ************** GLITCH ******************
 // 1º 22' 30'' 3asdx
+// 1º 31' Importante no tener hardcodeado el puerto 4asdx
+// 1º 33' En el PACKAGE.JSON tener definico oblig. el START
+// 1º 41' 30'' Glitch NO reconoce IMPORT <> FROM..
+// ... y hace el reemplazo de TYPES MODULE a REQUIRE
 
 
 const express = require('express')
-
+//import express from 'express'
 
 // import usersRouter from './routes/users.router.js'
 // import productsRouter from './routes/products.router.js'
 const  viewsRouter = require('./routes/views.router.js')
+//import viewsRouter from './routes/views.router.js'
 // import { __dirname } from './utils.js'
 // import { uploader } from './multer.js'
 // motor de plantilla
@@ -30,10 +35,12 @@ const  { productsSocket } = require('./utils/productsSocket.js')
 const  { Server } = require('socket.io')
 
 const app = express()
+
 // Guardar en una cont
+// 4asdx
 const PORT = process.env.PORT || 8080
 
-
+// 4asdx
 const httpServer = app.listen(PORT, error => {
     if(error) console.log(error)
     console.log('Server escuchando en el puerto 8080')

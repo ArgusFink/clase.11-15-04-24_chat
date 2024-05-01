@@ -69,4 +69,6 @@ router.get('/', (req, res) => {
 //         styles: 'homeStyles.css' })
 // })
 
+//export default router
 module.exports = router
+
